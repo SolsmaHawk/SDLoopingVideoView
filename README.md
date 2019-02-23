@@ -36,8 +36,10 @@ The easiest way to create a ```SDLoopingVideoView``` is to drag and drop a ```UI
 
 ### Programatically
 You can also initialize an SDLoopingVideoView by declaring it in code:
-```let loopingVideoView = SDLoopingVideoView.init(frame: CGRect.init(x: 0, y: 0, width: 200, height: 200), videoName: "solsmaDev_logo", videoType: "mov")
-view.addSubview(loopingVideoView)```
+```
+let loopingVideoView = SDLoopingVideoView.init(frame: CGRect.init(x: 0, y: 0, width: 200, height: 200), videoName: "solsmaDev_logo", videoType: "mov")
+view.addSubview(loopingVideoView)
+```
 
 ## Author
 
