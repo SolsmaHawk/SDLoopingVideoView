@@ -9,7 +9,7 @@
 
 ## Description
 
-SDFancyTextField is a UIView subclass that replicates the functionality of a UITextField with many added features including automated field-validation and unique animations. UITextField has always been a little… plain. With SDFancyTextField you can easily add an interactive textfield in code or using interface builder. Using interface builder, an SDFancyTextField can be placed in your view and entirely customized within IB. In only a couple lines of code you can have the textfield setup to automatically validate and organize textfields into forms that can be validated all at once (all with fancy animations 😎).
+SDLoopingVideoView is a looping video-view based off of AVPlayerLayer; it works great when used as a video background (see below for list of apps using SDLoopingVideoView). SDLoopingVideoView automatically scales any video  displayed to aspect-fill the view you define; scaling can be set manually as well. SDLoopingVideoView responds to any UIView animations and scales accordingly without interuption of the video playing.
 
 ## Example
 
