@@ -60,6 +60,10 @@ public class SDLoopingVideoView: UIView {
                         self?.player?.seek(to: CMTime.zero)
                         self?.player?.play()
                     }
+                    NotificationCenter.default.addObserver(forName: UIApplication.willEnterForegroundNotification, object: nil, queue: .main) { [weak self] _ in
+                        self?.player?.seek(to: CMTime.zero)
+                        self?.player?.play()
+                    }
                 }
             }
         }
