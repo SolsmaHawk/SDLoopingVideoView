@@ -35,7 +35,7 @@ pod 'SDFancyTextField'
 The easiest way to create a ```SDFancyTextField``` is to drag and drop a ```UIView``` in interface builder and set its class to ```SDFancyTextField```.
 ## Author
 
-John Solsma (Solsma Dev Inc.), solsma@me.com
+John Solsma (Solsma Dev Inc.), solsma@me.com, http://SolsmaDev.com
 
 ## License
 
