@@ -21,18 +21,18 @@ Swift 4
 
 ## Installation
 
-SDFancyTextField is available through [CocoaPods](https://cocoapods.org). To install
+SDLoopingVideoView is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'SDFancyTextField'
+pod 'SDLoopingVideoView'
 ```
 
 ## How to use
 
 ### Interface Builder
 ![](Screenshots/SDFancyTextField_example1.png)
-The easiest way to create a ```SDFancyTextField``` is to drag and drop a ```UIView``` in interface builder and set its class to ```SDFancyTextField```.
+The easiest way to create a ```SDLoopingVideoView``` is to drag and drop a ```UIView``` in interface builder and set its class to ```SDLoopingVideoView```. Then, under the attributes inspector tab, set the ```videoName``` property to the name of your video file and set the ```videoType``` property to the extension of your video file.
 ## Author
 
 John Solsma (Solsma Dev Inc.), solsma@me.com, http://SolsmaDev.com
