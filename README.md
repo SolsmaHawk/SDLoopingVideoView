@@ -33,6 +33,12 @@ pod 'SDLoopingVideoView'
 ### Interface Builder
 ![](Screenshots/SDFancyTextField_example1.png)
 The easiest way to create a ```SDLoopingVideoView``` is to drag and drop a ```UIView``` in interface builder and set its class to ```SDLoopingVideoView```. Then, under the attributes inspector tab, set the ```videoName``` property to the name of your video file and set the ```videoType``` property to the extension of your video file.
+
+### Programatically
+You can also initialize an SDLoopingVideoView by declaring it in code:
+```let loopingVideoView = SDLoopingVideoView.init(frame: CGRect.init(x: 0, y: 0, width: 200, height: 200), videoName: "solsmaDev_logo", videoType: "mov")
+view.addSubview(loopingVideoView)```
+
 ## Author
 
 John Solsma (Solsma Dev Inc.), solsma@me.com, http://SolsmaDev.com
