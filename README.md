@@ -50,7 +50,7 @@ Simple!
 John Solsma (Solsma Dev Inc.), solsma@me.com, http://SolsmaDev.com
 
 ## Apps using SDLoopingVideoView
-If you use SDLoopingVideoView in a public app, email me and I will add it to the list!
+If you're using SDLoopingVideoView in a public app, email me and I will add it to the list!
 ## License
 
 SDLoopingVideoView is available under the MIT license. See the LICENSE file for more info.
