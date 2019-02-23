@@ -43,6 +43,7 @@ videoName: "your_video_name",
 videoType: "mp4")
 view.addSubview(loopingVideoView)
 ```
+Simple!
 
 ## Author
 
