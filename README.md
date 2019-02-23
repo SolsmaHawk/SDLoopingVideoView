@@ -49,6 +49,8 @@ Simple!
 
 John Solsma (Solsma Dev Inc.), solsma@me.com, http://SolsmaDev.com
 
+## Apps using SDLoopingVideoView
+
 ## License
 
 SDLoopingVideoView is available under the MIT license. See the LICENSE file for more info.
