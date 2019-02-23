@@ -51,4 +51,4 @@ John Solsma (Solsma Dev Inc.), solsma@me.com, http://SolsmaDev.com
 
 ## License
 
-SDFancyTextField is available under the MIT license. See the LICENSE file for more info.
+SDLoopingVideoView is available under the MIT license. See the LICENSE file for more info.
