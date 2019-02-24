@@ -49,6 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				31E948C72222F92900C6A14C /* SDLoopingVideoView.podspec */,
+				31E948C92222FA0F00C6A14C /* LICENSE */,
 				31E948C62222F8C800C6A14C /* SDLoopingVideoView */,
 				31E948A02220CE4400C6A14C /* SDLoopingVideoViewExample */,
 				31E9489F2220CE4400C6A14C /* Products */,
@@ -73,7 +74,6 @@
 				31E948A82220CE4700C6A14C /* Assets.xcassets */,
 				31E948AA2220CE4700C6A14C /* LaunchScreen.storyboard */,
 				31E948AD2220CE4700C6A14C /* Info.plist */,
-				31E948C92222FA0F00C6A14C /* LICENSE */,
 			);
 			path = SDLoopingVideoViewExample;
 			sourceTree = "<group>";
