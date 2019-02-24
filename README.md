@@ -5,11 +5,11 @@
 [![License](https://img.shields.io/cocoapods/l/SDFancyTextField.svg?style=flat)](https://cocoapods.org/pods/SDFancyTextField)
 [![Platform](https://img.shields.io/cocoapods/p/SDFancyTextField.svg?style=flat)](https://cocoapods.org/pods/SDFancyTextField)
 
-![](Screenshots/SDLoopingVideoView_demo.gif)
-
 ## Description
 
 SDLoopingVideoView is a looping video-view based off of AVPlayerLayer; it works great when used as a video background (see below for list of apps using SDLoopingVideoView). SDLoopingVideoView automatically scales any video  displayed to aspect-fill the view you define; scaling can be set manually as well. SDLoopingVideoView responds to any UIView animations and scales accordingly without interuption of the video playing.
+
+![](Screenshots/SDLoopingVideoView_demo.gif)
 
 ## Example
 
@@ -31,9 +31,10 @@ pod 'SDLoopingVideoView'
 ## How to use
 
 ### Interface Builder
-![](Screenshots/attributesInspector.png)
 
 The easiest way to create a ```SDLoopingVideoView``` is to drag and drop a ```UIView``` in interface builder and set its class to ```SDLoopingVideoView```. Then, under the attributes inspector tab, set the ```videoName``` property to the name of your video file and set the ```videoType``` property to the extension of your video file.
+
+![](Screenshots/attributesInspector.png)
 
 ### Programatically
 You can also initialize an SDLoopingVideoView by declaring it in code:
