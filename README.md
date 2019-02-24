@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/SDFancyTextField.svg?style=flat)](https://cocoapods.org/pods/SDFancyTextField)
 [![Platform](https://img.shields.io/cocoapods/p/SDFancyTextField.svg?style=flat)](https://cocoapods.org/pods/SDFancyTextField)
 
-![](Screenshots/SDFancyTextField_main_demo.gif)
+![](Screenshots/SDLoopingVideoView_demo.gif)
 
 ## Description
 
