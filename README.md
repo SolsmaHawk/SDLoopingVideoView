@@ -1,9 +1,9 @@
 # SDLoopingVideoView
 
-[![CI Status](https://img.shields.io/travis/SolsmaHawk/SDFancyTextField.svg?style=flat)](https://travis-ci.org/SolsmaHawk/SDFancyTextField)
-[![Version](https://img.shields.io/cocoapods/v/SDFancyTextField.svg?style=flat)](https://cocoapods.org/pods/SDFancyTextField)
-[![License](https://img.shields.io/cocoapods/l/SDFancyTextField.svg?style=flat)](https://cocoapods.org/pods/SDFancyTextField)
-[![Platform](https://img.shields.io/cocoapods/p/SDFancyTextField.svg?style=flat)](https://cocoapods.org/pods/SDFancyTextField)
+[![CI Status](https://img.shields.io/travis/SolsmaHawk/SDLoopingVideoView.svg?style=flat)](https://travis-ci.org/SolsmaHawk/SDLoopingVideoView)
+[![Version](https://img.shields.io/cocoapods/v/SDLoopingVideoView.svg?style=flat)](https://cocoapods.org/pods/SDLoopingVideoView)
+[![License](https://img.shields.io/cocoapods/l/SDLoopingVideoView.svg?style=flat)](https://cocoapods.org/pods/SDLoopingVideoView)
+[![Platform](https://img.shields.io/cocoapods/p/SDLoopingVideoView.svg?style=flat)](https://cocoapods.org/pods/SDLoopingVideoView)
 
 ## Description
 
