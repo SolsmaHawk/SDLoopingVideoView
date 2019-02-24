@@ -47,6 +47,11 @@ view.addSubview(loopingVideoView)
 ```
 Simple!
 
+### Get Creative
+You can setup multiple SDLoopingVideoViews to display simultaneously. (Video game footage taken from Velocity Breaker by Solsma Dev, available in the App Store.)
+
+![](Screenshots/SDLoopingVideoView_demo.gif)
+
 ## Author
 
 John Solsma (Solsma Dev Inc.), solsma@me.com, http://SolsmaDev.com
