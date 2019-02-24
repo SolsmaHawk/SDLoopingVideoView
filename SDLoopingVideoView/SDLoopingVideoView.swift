@@ -34,7 +34,7 @@ public class SDLoopingVideoView: UIView {
      
      - Returns: An SDLoopingVideoView
      */
-    init(frame: CGRect, videoName: String, videoType: String, scaling: AVLayerVideoGravity = .resizeAspectFill) {
+    public init(frame: CGRect, videoName: String, videoType: String, scaling: AVLayerVideoGravity = .resizeAspectFill) {
         self.videoName = videoName
         self.videoType = videoType
         self.scaling = scaling
