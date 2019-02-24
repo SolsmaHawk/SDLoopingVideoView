@@ -33,6 +33,7 @@
 		31E948C72222F92900C6A14C /* SDLoopingVideoView.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SDLoopingVideoView.podspec; sourceTree = "<group>"; };
 		31E948C92222FA0F00C6A14C /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		31E948CC22231AFC00C6A14C /* SDLoopingVideoView_demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = SDLoopingVideoView_demo.gif; sourceTree = "<group>"; };
+		31E948CD22231CAD00C6A14C /* attributesInspector.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = attributesInspector.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				31E948CC22231AFC00C6A14C /* SDLoopingVideoView_demo.gif */,
+				31E948CD22231CAD00C6A14C /* attributesInspector.png */,
 			);
 			path = Screenshots;
 			sourceTree = "<group>";
