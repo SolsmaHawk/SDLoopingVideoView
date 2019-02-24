@@ -34,6 +34,7 @@
 		31E948C92222FA0F00C6A14C /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		31E948CC22231AFC00C6A14C /* SDLoopingVideoView_demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = SDLoopingVideoView_demo.gif; sourceTree = "<group>"; };
 		31E948CD22231CAD00C6A14C /* attributesInspector.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = attributesInspector.png; sourceTree = "<group>"; };
+		31E948CE22231F6700C6A14C /* SDLoopingVideoView_twovideoDemo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = SDLoopingVideoView_twovideoDemo.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +104,7 @@
 			children = (
 				31E948CC22231AFC00C6A14C /* SDLoopingVideoView_demo.gif */,
 				31E948CD22231CAD00C6A14C /* attributesInspector.png */,
+				31E948CE22231F6700C6A14C /* SDLoopingVideoView_twovideoDemo.gif */,
 			);
 			path = Screenshots;
 			sourceTree = "<group>";
