@@ -67,7 +67,7 @@ You can setup multiple SDLoopingVideoViews to display simultaneously. (Video gam
 John Solsma (Solsma Dev Inc.), solsma@me.com, http://SolsmaDev.com
 
 ## Apps using SDLoopingVideoView
-If you're using SDLoopingVideoView in a public app, email me and I will add it to the list!
+If you're using SDLoopingVideoView in a public app, email me (jsolsma@solsmadev.com) and I will add it to the list!
 ## License
 
 SDLoopingVideoView is available under the MIT license. See the LICENSE file for more info.
