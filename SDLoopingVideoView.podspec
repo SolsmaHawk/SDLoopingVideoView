@@ -23,12 +23,12 @@ SDLoopingVideoView is a looping video-view based off of AVPlayerLayer; it works 
 
   s.homepage         = 'https://github.com/SolsmaHawk/SDLoopingVideoView'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.license          = { :type => 'MIT', :file => 'SDLoopingVideoViewExample/LICENSE' }
   s.author           = { 'SolsmaHawk' => 'solsma@me.com' }
   s.source           = { :git => 'https://github.com/SolsmaHawk/SDLoopingVideoView.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '11.0'
-  s.swift_version = '4.0'
+  s.swift_version = '4.2'
   s.source_files = 'SDLoopingVideoView/*.{h,m,swift}'
   
   # s.resource_bundles = {

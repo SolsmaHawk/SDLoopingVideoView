@@ -16,6 +16,7 @@
 		31E948B82220D1FC00C6A14C /* solsmaDev_logo.mov in Resources */ = {isa = PBXBuildFile; fileRef = 31E948B62220D1FC00C6A14C /* solsmaDev_logo.mov */; };
 		31E948B92220D1FC00C6A14C /* velocityBreaker_video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 31E948B72220D1FC00C6A14C /* velocityBreaker_video.mov */; };
 		31E948C82222F92900C6A14C /* SDLoopingVideoView.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 31E948C72222F92900C6A14C /* SDLoopingVideoView.podspec */; };
+		31E948CA2222FA1000C6A14C /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 31E948C92222FA0F00C6A14C /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		31E948B62220D1FC00C6A14C /* solsmaDev_logo.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = solsmaDev_logo.mov; sourceTree = "<group>"; };
 		31E948B72220D1FC00C6A14C /* velocityBreaker_video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = velocityBreaker_video.mov; sourceTree = "<group>"; };
 		31E948C72222F92900C6A14C /* SDLoopingVideoView.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SDLoopingVideoView.podspec; sourceTree = "<group>"; };
+		31E948C92222FA0F00C6A14C /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +48,7 @@
 		31E948952220CE4300C6A14C = {
 			isa = PBXGroup;
 			children = (
+				31E948C72222F92900C6A14C /* SDLoopingVideoView.podspec */,
 				31E948C62222F8C800C6A14C /* SDLoopingVideoView */,
 				31E948A02220CE4400C6A14C /* SDLoopingVideoViewExample */,
 				31E9489F2220CE4400C6A14C /* Products */,
@@ -70,7 +73,7 @@
 				31E948A82220CE4700C6A14C /* Assets.xcassets */,
 				31E948AA2220CE4700C6A14C /* LaunchScreen.storyboard */,
 				31E948AD2220CE4700C6A14C /* Info.plist */,
-				31E948C72222F92900C6A14C /* SDLoopingVideoView.podspec */,
+				31E948C92222FA0F00C6A14C /* LICENSE */,
 			);
 			path = SDLoopingVideoViewExample;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				31E948B82220D1FC00C6A14C /* solsmaDev_logo.mov in Resources */,
 				31E948C82222F92900C6A14C /* SDLoopingVideoView.podspec in Resources */,
 				31E948AC2220CE4700C6A14C /* LaunchScreen.storyboard in Resources */,
+				31E948CA2222FA1000C6A14C /* LICENSE in Resources */,
 				31E948A92220CE4700C6A14C /* Assets.xcassets in Resources */,
 				31E948B92220D1FC00C6A14C /* velocityBreaker_video.mov in Resources */,
 				31E948A72220CE4400C6A14C /* Main.storyboard in Resources */,
