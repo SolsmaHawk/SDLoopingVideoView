@@ -32,6 +32,7 @@ pod 'SDLoopingVideoView'
 
 ### Interface Builder
 ![](Screenshots/attributesInspector.png)
+
 The easiest way to create a ```SDLoopingVideoView``` is to drag and drop a ```UIView``` in interface builder and set its class to ```SDLoopingVideoView```. Then, under the attributes inspector tab, set the ```videoName``` property to the name of your video file and set the ```videoType``` property to the extension of your video file.
 
 ### Programatically
