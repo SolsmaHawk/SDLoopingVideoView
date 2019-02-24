@@ -32,6 +32,7 @@
 		31E948B72220D1FC00C6A14C /* velocityBreaker_video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = velocityBreaker_video.mov; sourceTree = "<group>"; };
 		31E948C72222F92900C6A14C /* SDLoopingVideoView.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SDLoopingVideoView.podspec; sourceTree = "<group>"; };
 		31E948C92222FA0F00C6A14C /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		31E948CC22231AFC00C6A14C /* SDLoopingVideoView_demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = SDLoopingVideoView_demo.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +51,7 @@
 			children = (
 				31E948C72222F92900C6A14C /* SDLoopingVideoView.podspec */,
 				31E948C92222FA0F00C6A14C /* LICENSE */,
+				31E948CB22231AE900C6A14C /* Screenshots */,
 				31E948C62222F8C800C6A14C /* SDLoopingVideoView */,
 				31E948A02220CE4400C6A14C /* SDLoopingVideoViewExample */,
 				31E9489F2220CE4400C6A14C /* Products */,
@@ -93,6 +95,14 @@
 				31E948B32220CED000C6A14C /* SDLoopingVideoView.swift */,
 			);
 			path = SDLoopingVideoView;
+			sourceTree = "<group>";
+		};
+		31E948CB22231AE900C6A14C /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				31E948CC22231AFC00C6A14C /* SDLoopingVideoView_demo.gif */,
+			);
+			path = Screenshots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
