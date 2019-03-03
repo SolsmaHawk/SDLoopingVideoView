@@ -69,8 +69,11 @@ John Solsma (Solsma Dev Inc.), solsma@me.com, http://SolsmaDev.com
 ## Apps using SDLoopingVideoView
 If you're using SDLoopingVideoView in a public app, email me (jsolsma@solsmadev.com) and I will add it to the list!
 [Velocity Breaker (tvOS + iOS)](https://itunes.apple.com/us/app/velocity-breaker/id1201572614?mt=8)
+
 [Jungle Card Match](https://itunes.apple.com/us/app/jungle-card-match/id1452078620?mt=8)
+
 [IMT Insurance Worry Free App](https://itunes.apple.com/us/app/worry-free/id739974896?mt=8)
+
 
 ## License
 
