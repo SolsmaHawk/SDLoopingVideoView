@@ -10,13 +10,15 @@ import UIKit
 import AVKit
 
 /// A looping video-view based off of AVPlayerLayer. Automatically scales video to aspect-fill, but can be manually set otherwise. Responds to UIView animations and scales accordingly.
+@available(iOS 12.0, *)
 public class SDLoopingVideoView: UIView {
     
     enum VideoPropertiesNotSetError: Error {
         case runtimeError(String)
     }
     
-    @IBInspectable private var videoName: String?
+    @IBInspectable private var video_Light: String?
+    @IBInspectable private var video_Night: String?
     @IBInspectable private var videoType: String?
     private var player: AVPlayer?
     private var playerLayer: AVPlayerLayer { get { return (self.layer as! AVPlayerLayer) } }
@@ -34,8 +36,9 @@ public class SDLoopingVideoView: UIView {
      
      - Returns: An SDLoopingVideoView
      */
-    public init(frame: CGRect, videoName: String, videoType: String, scaling: AVLayerVideoGravity = .resizeAspectFill) {
-        self.videoName = videoName
+    public init(frame: CGRect, videoName_Light: String, videoName_Night: String?, videoType: String, scaling: AVLayerVideoGravity = .resizeAspectFill) {
+        self.video_Light = videoName_Light
+        self.video_Night = videoName_Night
         self.videoType = videoType
         self.scaling = scaling
         super.init(frame:frame)
@@ -43,17 +46,26 @@ public class SDLoopingVideoView: UIView {
     }
     
     private func setupVideoView() throws {
-        guard videoName != nil && videoType != nil else {
+        guard video_Light != nil && video_Night != nil && videoType != nil else {
             throw VideoPropertiesNotSetError.runtimeError("Video name or video type not set")
         }
         if player == nil  {
             self.backgroundColor = UIColor.clear
             DispatchQueue.global(qos: .userInitiated).async { [weak self] in
-                guard let path = Bundle.main.path(forResource: self?.videoName!, ofType:self?.videoType!) else { debugPrint("video file not found")
-                    return }
-                self?.player = AVPlayer(url: URL(fileURLWithPath: path))
-                self?.player?.isMuted = true
+                
                 DispatchQueue.main.async {
+                    var video: String {
+                            switch self?.traitCollection.userInterfaceStyle {
+                            case .light, .unspecified, .none:
+                                return self!.video_Light!
+                             case .dark:
+                                return self!.video_Night!
+                            }
+                    }
+                    guard let path = Bundle.main.path(forResource: video, ofType:self?.videoType!) else { debugPrint("video file not found")
+                        return }
+                    self?.player = AVPlayer(url: URL(fileURLWithPath: path))
+                    self?.player?.isMuted = true
                     self?.playerLayer.player = self?.player
                     self?.playerLayer.videoGravity = self?.scaling ?? AVLayerVideoGravity.resizeAspectFill
                     self?.player!.play()
@@ -88,4 +100,5 @@ public class SDLoopingVideoView: UIView {
         super.layoutSubviews()
         attemptVideoSetup()
     }
+    
 }
