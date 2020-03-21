@@ -17,12 +17,14 @@ public class SDLoopingVideoView: UIView {
         case runtimeError(String)
     }
     
-    @IBInspectable private var video_Light: String?
-    @IBInspectable private var video_Night: String?
-    @IBInspectable private var videoType: String?
+    @IBInspectable private var videoName: String
+    @IBInspectable private var videoType: String
+    @IBInspectable private var videoNameDarkMode: String?
+    @IBInspectable private var videoTypeDarkMode: String?
+    
     private var player: AVPlayer?
     private var playerLayer: AVPlayerLayer { get { return (self.layer as! AVPlayerLayer) } }
-    public var scaling: AVLayerVideoGravity?
+
     override public class var layerClass: AnyClass { return AVPlayerLayer.self }
     
     
@@ -36,17 +38,16 @@ public class SDLoopingVideoView: UIView {
      
      - Returns: An SDLoopingVideoView
      */
-    public init(frame: CGRect, videoName_Light: String, videoName_Night: String?, videoType: String, scaling: AVLayerVideoGravity = .resizeAspectFill) {
-        self.video_Light = videoName_Light
-        self.video_Night = videoName_Night
-        self.videoType = videoType
-        self.scaling = scaling
+    public init(frame: CGRect, video: SDVideo, darkModeVideo: SDVideo? = nil) {
+        self.videoName = video.fileName
+        self.videoNameDarkMode = darkModeVideo?.fileName
+        self.videoType = video.fileNameWithExtension
         super.init(frame:frame)
         attemptVideoSetup()
     }
     
     private func setupVideoView() throws {
-        guard video_Light != nil && video_Night != nil && videoType != nil else {
+        guard videoName != nil && video_Night != nil && videoType != nil else {
             throw VideoPropertiesNotSetError.runtimeError("Video name or video type not set")
         }
         if player == nil  {
