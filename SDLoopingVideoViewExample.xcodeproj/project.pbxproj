@@ -98,6 +98,8 @@
 			children = (
 				31E948B62220D1FC00C6A14C /* solsmaDev_logo.mov */,
 				31E948B72220D1FC00C6A14C /* velocityBreaker_video.mov */,
+				31420D3524270AAC00A7B409 /* nyc_skyline_day.mp4 */,
+				31420D3624270AAC00A7B409 /* nyc_skyline_night.mp4 */,
 			);
 			path = Videos;
 			sourceTree = "<group>";
@@ -118,8 +120,6 @@
 				31E948CC22231AFC00C6A14C /* SDLoopingVideoView_demo.gif */,
 				31E948CD22231CAD00C6A14C /* attributesInspector.png */,
 				31E948CE22231F6700C6A14C /* SDLoopingVideoView_twovideoDemo.gif */,
-				31420D3524270AAC00A7B409 /* nyc_skyline_day.mp4 */,
-				31420D3624270AAC00A7B409 /* nyc_skyline_night.mp4 */,
 			);
 			path = Screenshots;
 			sourceTree = "<group>";
