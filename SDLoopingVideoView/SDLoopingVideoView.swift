@@ -34,8 +34,8 @@ public class SDLoopingVideoView: UIView {
      
      - Parameters:
      - frame: The frame of the view
-     - videoName: The name of the video file to play and loop
-     - videoType: The file extension of the video file
+     - video: The default video to play on loop
+     - darkModeVideo: An optional video to play when dark mode is active
      
      - Returns: An SDLoopingVideoView
      */
