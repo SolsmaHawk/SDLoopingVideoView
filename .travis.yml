@@ -11,7 +11,7 @@ gem install cocoapods # Since Travis is not always on latest version
 # - pod install --project-directory=Example
 xcode_project: SDLoopingVideoViewExample.xcodeproj # path to your xcodeproj folder
 xcode_scheme: SDLoopingVideoView
-xcode_destination: platform=iOS Simulator,OS=13.0,name=iPad Pro (9.7-inch)
+xcode_destination: platform=iOS Simulator,OS=13.2,name=iPad Pro (9.7-inch)
 script:
-#- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace SDFancyTextField.xcodeproj -scheme SDFancyTextField -sdk iphonesimulator13.0 ONLY_ACTIVE_ARCH=NO | xcpretty
+#- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace SDFancyTextField.xcodeproj -scheme SDFancyTextField -sdk iphonesimulator13.2 ONLY_ACTIVE_ARCH=NO | xcpretty
 - pod lib lint
