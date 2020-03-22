@@ -4,7 +4,7 @@
 [![Version](https://img.shields.io/cocoapods/v/SDLoopingVideoView.svg?style=flat)](https://cocoapods.org/pods/SDLoopingVideoView)
 [![License](https://img.shields.io/cocoapods/l/SDLoopingVideoView.svg?style=flat)](https://cocoapods.org/pods/SDLoopingVideoView)
 [![Platform](https://img.shields.io/cocoapods/p/SDLoopingVideoView.svg?style=flat)](https://cocoapods.org/pods/SDLoopingVideoView)
-[![Swift](https://img.shields.io/badge/Swift-4.2+-orange.svg)](https://swift.org)
+[![Swift](https://img.shields.io/badge/Swift-5.0+-orange.svg)](https://swift.org)
 
 ## Description
 
