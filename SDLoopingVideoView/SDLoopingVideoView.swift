@@ -54,9 +54,9 @@ public class SDLoopingVideoView: UIView {
         guard darkModeVideoIsValid else {
             throw VideoPropertiesNotSetError.runtimeError("Dark mode video name or video type not set")
         }
-//        guard darkModeVideoWithoutDefaultVideo else {
-//            throw VideoPropertiesNotSetError.runtimeError("A dark mode video can not be set without a default video also set")
-//        }
+        guard !darkModeVideoWithoutDefaultVideo else {
+            throw VideoPropertiesNotSetError.runtimeError("A dark mode video can not be set without a default video also set")
+        }
         if player == nil  {
             self.backgroundColor = UIColor.clear
             DispatchQueue.global(qos: .userInitiated).async { [weak self] in
@@ -114,12 +114,16 @@ extension SDLoopingVideoView {
         videoName != nil && videoType != nil
     }
     
+    private var darkModeVideoIsSet: Bool {
+        videoNameDarkMode != nil && videoTypeDarkMode != nil
+    }
+    
     private var darkModeVideoIsValid: Bool {
-        (videoNameDarkMode == nil && videoTypeDarkMode == nil) || (videoNameDarkMode != nil && videoTypeDarkMode != nil)
+        darkModeVideoIsSet || !darkModeVideoIsSet
     }
     
     private var darkModeVideoWithoutDefaultVideo: Bool {
-        darkModeVideoIsValid && !videoIsSet
+        return darkModeVideoIsSet && !videoIsSet
     }
     
     private var videoForUserInterfaceStyle: SDVideo {
