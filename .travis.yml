@@ -7,7 +7,7 @@ language: Swift
 # cache: cocoapods
 # podfile: Example/Podfile
 # before_install:
-# - gem install cocoapods # Since Travis is not always on latest version
+gem install cocoapods # Since Travis is not always on latest version
 # - pod install --project-directory=Example
 xcode_project: SDLoopingVideoViewExample.xcodeproj # path to your xcodeproj folder
 xcode_scheme: SDLoopingVideoView
