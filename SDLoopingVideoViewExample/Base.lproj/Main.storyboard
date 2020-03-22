@@ -116,7 +116,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CI2-16-gx6" customClass="SDLoopingVideoView" customModule="SDLoopingVideoViewExample" customModuleProvider="target">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CI2-16-gx6" customClass="SDLoopingVideoView" customModule="SDLoopingVideoViewExample" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <userDefinedRuntimeAttributes>
@@ -129,10 +129,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="CI2-16-gx6" firstAttribute="leading" secondItem="7sy-fH-8iZ" secondAttribute="leading" id="H2d-l7-fpw"/>
+                            <constraint firstItem="CI2-16-gx6" firstAttribute="leading" secondItem="SEq-tJ-hUj" secondAttribute="leading" id="H2d-l7-fpw"/>
                             <constraint firstItem="CI2-16-gx6" firstAttribute="bottom" secondItem="SEq-tJ-hUj" secondAttribute="bottom" id="V02-IS-UE1"/>
                             <constraint firstAttribute="top" secondItem="CI2-16-gx6" secondAttribute="top" id="Vtn-PH-nI7"/>
-                            <constraint firstItem="7sy-fH-8iZ" firstAttribute="trailing" secondItem="CI2-16-gx6" secondAttribute="trailing" id="dv1-h3-lj2"/>
+                            <constraint firstAttribute="trailing" secondItem="CI2-16-gx6" secondAttribute="trailing" id="dv1-h3-lj2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7sy-fH-8iZ"/>
                     </view>
