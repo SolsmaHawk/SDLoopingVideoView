@@ -17,16 +17,17 @@ public class SDLoopingVideoView: UIView {
         case runtimeError(String)
     }
     
-    @IBInspectable private var videoName: String
-    @IBInspectable private var videoType: String
+    @IBInspectable private var videoName: String?
+    @IBInspectable private var videoType: String?
     @IBInspectable private var videoNameDarkMode: String?
     @IBInspectable private var videoTypeDarkMode: String?
-    
+
+    private var videoScaling: AVLayerVideoGravity?
+    private var videoScalingDarkMode: AVLayerVideoGravity?
     private var player: AVPlayer?
     private var playerLayer: AVPlayerLayer { get { return (self.layer as! AVPlayerLayer) } }
-
-    override public class var layerClass: AnyClass { return AVPlayerLayer.self }
     
+    override public class var layerClass: AnyClass { return AVPlayerLayer.self }
     
     /**
      Initializes a new SDLoopingVideoView.
@@ -47,36 +48,38 @@ public class SDLoopingVideoView: UIView {
     }
     
     private func setupVideoView() throws {
-        guard videoName != nil && video_Night != nil && videoType != nil else {
+        guard videoIsSet else {
             throw VideoPropertiesNotSetError.runtimeError("Video name or video type not set")
+        }
+        guard darkModeVideoIsValid else {
+            throw VideoPropertiesNotSetError.runtimeError("Dark mode video name or video type not set")
+        }
+        guard darkModeVideoWithoutDefaultVideo else {
+            throw VideoPropertiesNotSetError.runtimeError("A dark mode video can not be set without a default video also set")
         }
         if player == nil  {
             self.backgroundColor = UIColor.clear
             DispatchQueue.global(qos: .userInitiated).async { [weak self] in
                 
-                DispatchQueue.main.async {
-                    var video: String {
-                            switch self?.traitCollection.userInterfaceStyle {
-                            case .light, .unspecified, .none:
-                                return self!.video_Light!
-                             case .dark:
-                                return self!.video_Night!
-                            }
-                    }
-                    guard let path = Bundle.main.path(forResource: video, ofType:self?.videoType!) else { debugPrint("video file not found")
+                DispatchQueue.main.async { [weak self] in
+                    guard let self = self else { return }
+
+                    guard let path = Bundle.main.path(forResource: self.videoForUserInterfaceStyle.fileName, ofType:self.videoForUserInterfaceStyle.fileExtension) else { debugPrint("video file not found")
                         return }
-                    self?.player = AVPlayer(url: URL(fileURLWithPath: path))
-                    self?.player?.isMuted = true
-                    self?.playerLayer.player = self?.player
-                    self?.playerLayer.videoGravity = self?.scaling ?? AVLayerVideoGravity.resizeAspectFill
-                    self?.player!.play()
-                    NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: self?.player!.currentItem, queue: .main) { [weak self] _ in
-                        self?.player?.seek(to: CMTime.zero)
-                        self?.player?.play()
+                    self.player = AVPlayer(url: URL(fileURLWithPath: path))
+                    self.player?.isMuted = true
+                    self.playerLayer.player = self.player
+                    self.playerLayer.videoGravity = self.videoForUserInterfaceStyle.gravity
+                    self.player!.play()
+                    NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: self.player!.currentItem, queue: .main) { [weak self] _ in
+                        guard let player = self?.player else { return }
+                        player.seek(to: CMTime.zero)
+                        player.play()
                     }
                     NotificationCenter.default.addObserver(forName: UIApplication.willEnterForegroundNotification, object: nil, queue: .main) { [weak self] _ in
-                        self?.player?.seek(to: CMTime.zero)
-                        self?.player?.play()
+                        guard let player = self?.player else { return }
+                        player.seek(to: CMTime.zero)
+                        player.play()
                     }
                 }
             }
@@ -100,6 +103,29 @@ public class SDLoopingVideoView: UIView {
     override public func layoutSubviews() {
         super.layoutSubviews()
         attemptVideoSetup()
+    }
+    
+}
+
+extension SDLoopingVideoView {
+    
+    private var videoIsSet: Bool {
+        videoName != nil && videoType != nil
+    }
+    
+    private var darkModeVideoIsValid: Bool {
+        (videoNameDarkMode == nil && videoTypeDarkMode == nil) || (videoNameDarkMode != nil && videoTypeDarkMode != nil)
+    }
+    
+    private var darkModeVideoWithoutDefaultVideo: Bool {
+        darkModeVideoIsValid && !videoIsSet
+    }
+    
+    private var videoForUserInterfaceStyle: SDVideo {
+        if let dmv = videoTypeDarkMode, let dmvt = videoTypeDarkMode, let dmvs = videoScalingDarkMode, traitCollection.userInterfaceStyle == .dark {
+            return .video(fileName: dmv, fileextension: SDVideoExtension(from: dmvt), scaling: dmvs)
+        }
+        return .video(fileName: videoName ?? "", fileextension: SDVideoExtension(from: ""), scaling: videoScaling ?? .resizeAspectFill)
     }
     
 }

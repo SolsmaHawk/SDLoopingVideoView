@@ -25,6 +25,27 @@ extension SDLoopingVideoView {
 
 extension SDLoopingVideoView.SDVideoExtension {
     
+    init(from string: String) {
+        switch string {
+        case "mpg":
+            self = .mkv
+        case "wmv":
+            self = .wmv
+        case "avi":
+            self = .avi
+        case "mkv":
+            self = .mkv
+        case "rmvb":
+            self = .rmvb
+        case "rm":
+            self = .rm
+        case "mp4":
+            self = .mp4
+        default:
+            self = .custom(fileExtension: string)
+        }
+    }
+    
     var stringRepresentation: String {
         switch self {
         case .custom(let fileExtension):
