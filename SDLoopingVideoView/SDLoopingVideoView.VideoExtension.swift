@@ -8,6 +8,7 @@
 
 import Foundation
 
+@available(iOS 13.0, *)
 extension SDLoopingVideoView {
     
     public enum SDVideoExtension {
@@ -24,6 +25,7 @@ extension SDLoopingVideoView {
     
 }
 
+@available(iOS 13.0, *)
 extension SDLoopingVideoView.SDVideoExtension {
     
     init(from string: String) {
