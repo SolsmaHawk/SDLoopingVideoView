@@ -54,19 +54,20 @@ public class SDLoopingVideoView: UIView {
         guard darkModeVideoIsValid else {
             throw VideoPropertiesNotSetError.runtimeError("Dark mode video name or video type not set")
         }
-        guard darkModeVideoWithoutDefaultVideo else {
-            throw VideoPropertiesNotSetError.runtimeError("A dark mode video can not be set without a default video also set")
-        }
+//        guard darkModeVideoWithoutDefaultVideo else {
+//            throw VideoPropertiesNotSetError.runtimeError("A dark mode video can not be set without a default video also set")
+//        }
         if player == nil  {
             self.backgroundColor = UIColor.clear
             DispatchQueue.global(qos: .userInitiated).async { [weak self] in
-                
+                guard let self = self, let path = Bundle.main.path(forResource: self.videoForUserInterfaceStyle.fileName, ofType: self.videoForUserInterfaceStyle.fileExtension) else {
+                        debugPrint("video file not found")
+                        return
+                }
+                let playerItem = AVPlayerItem(url: URL(fileURLWithPath: path))
                 DispatchQueue.main.async { [weak self] in
                     guard let self = self else { return }
-
-                    guard let path = Bundle.main.path(forResource: self.videoForUserInterfaceStyle.fileName, ofType:self.videoForUserInterfaceStyle.fileExtension) else { debugPrint("video file not found")
-                        return }
-                    self.player = AVPlayer(url: URL(fileURLWithPath: path))
+                    self.player = AVPlayer(playerItem: playerItem)
                     self.player?.isMuted = true
                     self.playerLayer.player = self.player
                     self.playerLayer.videoGravity = self.videoForUserInterfaceStyle.gravity
@@ -125,7 +126,7 @@ extension SDLoopingVideoView {
         if let dmv = videoTypeDarkMode, let dmvt = videoTypeDarkMode, let dmvs = videoScalingDarkMode, traitCollection.userInterfaceStyle == .dark {
             return .video(fileName: dmv, fileextension: SDVideoExtension(from: dmvt), scaling: dmvs)
         }
-        return .video(fileName: videoName ?? "", fileextension: SDVideoExtension(from: ""), scaling: videoScaling ?? .resizeAspectFill)
+        return .video(fileName: videoName ?? "", fileextension: SDVideoExtension(from: videoType ?? ""), scaling: videoScaling ?? .resizeAspectFill)
     }
     
 }

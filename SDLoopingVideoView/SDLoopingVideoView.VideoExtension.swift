@@ -18,6 +18,7 @@ extension SDLoopingVideoView {
         case rmvb
         case rm
         case mp4
+        case mov
         case custom(fileExtension: String)
     }
     
@@ -41,6 +42,8 @@ extension SDLoopingVideoView.SDVideoExtension {
             self = .rm
         case "mp4":
             self = .mp4
+        case "mov":
+            self = .mov
         default:
             self = .custom(fileExtension: string)
         }
@@ -64,6 +67,8 @@ extension SDLoopingVideoView.SDVideoExtension {
             return "rm"
         case .mp4:
             return "mp4"
+        case .mov:
+            return "mov"
         }
     }
     
