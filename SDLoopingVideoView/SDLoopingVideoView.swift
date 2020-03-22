@@ -102,7 +102,10 @@ public class SDLoopingVideoView: UIView {
     }
     
     override public func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-      
+        if previousTraitCollection?.userInterfaceStyle != traitCollection.userInterfaceStyle {
+            player = nil
+            attemptVideoSetup()
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
