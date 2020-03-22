@@ -2,7 +2,7 @@
 //  SDLoopingVideoView.VideoType.swift
 //  SDLoopingVideoViewExample
 //
-//  Created by ZuluAlpha on 3/21/20.
+//  Created by John Solsma on 3/21/20.
 //  Copyright © 2020 Solsma Dev Inc. All rights reserved.
 //
 

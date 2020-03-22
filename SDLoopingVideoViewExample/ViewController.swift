@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Uncomment out the bottom two lines to see how to programtically add an SDLoopingVideoView
-        //let loopingVideoView = SDLoopingVideoView.init(frame: CGRect.init(x: 0, y: 0, width: 200, height: 200), videoName: "solsmaDev_logo", videoType: "mov")
+        //let loopingVideoView = SDLoopingVideoView(frame: CGRect.init(x: 0, y: 0, width: 200, height: 200), video: .video(fileName: "solsmaDev_logo", fileextension: .mov), darkModeVideo: .video(fileName: "velocityBreaker_video", fileextension: .mov))
         //view.addSubview(loopingVideoView)
     }
 

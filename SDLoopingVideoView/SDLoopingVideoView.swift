@@ -10,12 +10,15 @@ import UIKit
 import AVKit
 
 /// A looping video-view based off of AVPlayerLayer. Automatically scales video to aspect-fill, but can be manually set otherwise. Responds to UIView animations and scales accordingly.
+
 @available(iOS 12.0, *)
 public class SDLoopingVideoView: UIView {
     
     enum VideoPropertiesNotSetError: Error {
         case runtimeError(String)
     }
+    
+    // MARK: Private Variables
     
     @IBInspectable private var videoName: String?
     @IBInspectable private var videoType: String?
@@ -29,6 +32,8 @@ public class SDLoopingVideoView: UIView {
     
     override public class var layerClass: AnyClass { return AVPlayerLayer.self }
     
+    // MARK: Construction
+    
     /**
      Initializes a new SDLoopingVideoView.
      
@@ -39,6 +44,7 @@ public class SDLoopingVideoView: UIView {
      
      - Returns: An SDLoopingVideoView
      */
+    
     public init(frame: CGRect, video: SDVideo, darkModeVideo: SDVideo? = nil) {
         self.videoName = video.fileName
         self.videoNameDarkMode = darkModeVideo?.fileName
@@ -49,6 +55,12 @@ public class SDLoopingVideoView: UIView {
         super.init(frame:frame)
         attemptVideoSetup()
     }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    // MARK: Setup
     
     private func setupVideoView() throws {
         guard videoIsSet else {
@@ -101,15 +113,13 @@ public class SDLoopingVideoView: UIView {
         }
     }
     
+    // MARK: UIView
+    
     override public func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         if previousTraitCollection?.userInterfaceStyle != traitCollection.userInterfaceStyle {
             player = nil
             attemptVideoSetup()
         }
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
     }
     
     override public func layoutSubviews() {
@@ -120,6 +130,8 @@ public class SDLoopingVideoView: UIView {
 }
 
 extension SDLoopingVideoView {
+    
+    // MARK: Computed Variables
     
     private var videoIsSet: Bool {
         videoName != nil && videoType != nil
