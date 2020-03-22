@@ -11,7 +11,7 @@ import AVKit
 
 /// A looping video-view based off of AVPlayerLayer. Automatically scales video to aspect-fill, but can be manually set otherwise. Responds to UIView animations and scales accordingly.
 
-@available(iOS 12.0, *)
+@available(iOS 13.0, *)
 public class SDLoopingVideoView: UIView {
     
     enum VideoPropertiesNotSetError: Error {
@@ -129,6 +129,7 @@ public class SDLoopingVideoView: UIView {
     
 }
 
+@available(iOS 13.0, *)
 extension SDLoopingVideoView {
     
     // MARK: Computed Variables

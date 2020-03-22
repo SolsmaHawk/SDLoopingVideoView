@@ -9,6 +9,7 @@
 import Foundation
 import AVKit
 
+@available(iOS 13.0, *)
 extension SDLoopingVideoView {
     
     public enum SDVideo {
