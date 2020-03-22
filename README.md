@@ -40,7 +40,8 @@ The easiest way to create a ```SDLoopingVideoView``` is to drag and drop a ```UI
 ### Programatically
 You can also initialize an SDLoopingVideoView by declaring it in code:
 ```
-let loopingVideoView = SDLoopingVideoView(frame: CGRect(x: 0, y: 0, width: 100, height: 100), video: .video(fileName: "yourVideoName", fileExtension: .mpg))
+let loopingVideoView = SDLoopingVideoView(frame: CGRect(x: 0, y: 0, width: 100, height: 100), 
+video: .video(fileName: "yourVideoName", fileExtension: .mpg))
 ```
 Or if you want to also include a video to use in darkmode:
 ```
