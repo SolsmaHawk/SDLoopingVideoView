@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
+   uuid = "092D2F1E-AFFF-4B63-BDC0-C9693FD5868B"
    type = "1"
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "D0778A82-12F8-420D-9955-313C89B188BA"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -16,6 +18,134 @@
             startingLineNumber = "64"
             endingLineNumber = "64"
             landmarkName = "setupVideoView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A124AF2B-CAD7-4007-B542-676F8F14D274"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SDLoopingVideoView/SDLoopingVideoView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "setupVideoView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0D751B6B-A46D-48D4-B700-CCC55EA60FEF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SDLoopingVideoView/SDLoopingVideoView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "setupVideoView()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0D751B6B-A46D-48D4-B700-CCC55EA60FEF - 4c3b6087ab161242"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SDLoopingVideoViewExample.SDLoopingVideoView.(setupVideoView in _44523EE5CC49173D78DA12F062FA0613)() throws -&gt; ()"
+                  moduleName = "SDLoopingVideoViewExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/johnsolsma/Documents/GitHub/SDLoopingVideoView_fixes/SDLoopingVideoView/SDLoopingVideoView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "586">
+               </Location>
+               <Location
+                  uuid = "0D751B6B-A46D-48D4-B700-CCC55EA60FEF - 8bee10f18d8a9752"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in SDLoopingVideoViewExample.SDLoopingVideoView.(setupVideoView in _44523EE5CC49173D78DA12F062FA0613)() throws -&gt; ()"
+                  moduleName = "SDLoopingVideoViewExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/johnsolsma/Documents/GitHub/SDLoopingVideoView_fixes/SDLoopingVideoView/SDLoopingVideoView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "262">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5048A9A3-0465-412F-9DD9-A3B85C0D543B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SDLoopingVideoView/SDLoopingVideoView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
+            landmarkName = "darkModeVideoWithoutDefaultVideo"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AC3C244F-1EA8-4998-B306-A050F9C30C69"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SDLoopingVideoView/SDLoopingVideoView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "traitCollectionDidChange(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8FAE5524-FEC4-43BD-9034-B9311999D296"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SDLoopingVideoView/SDLoopingVideoView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
+            landmarkName = "videoForUserInterfaceStyle"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D6952859-32F0-44E4-913F-21424D68A244"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SDLoopingVideoView/SDLoopingVideoView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "traitCollectionDidChange(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
