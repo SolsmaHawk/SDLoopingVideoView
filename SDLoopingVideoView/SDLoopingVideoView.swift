@@ -151,9 +151,9 @@ extension SDLoopingVideoView {
     
     private var videoForUserInterfaceStyle: SDVideo {
         if let dmv = videoNameDarkMode, let dmvt = videoTypeDarkMode, traitCollection.userInterfaceStyle == .dark {
-            return .video(fileName: dmv, fileextension: SDVideoExtension(from: dmvt), scaling: videoScalingDarkMode ?? .resizeAspectFill)
+            return .video(fileName: dmv, fileExtension: SDVideoExtension(from: dmvt), scaling: videoScalingDarkMode ?? .resizeAspectFill)
         }
-        return .video(fileName: videoName ?? "", fileextension: SDVideoExtension(from: videoType ?? ""), scaling: videoScaling ?? .resizeAspectFill)
+        return .video(fileName: videoName ?? "", fileExtension: SDVideoExtension(from: videoType ?? ""), scaling: videoScaling ?? .resizeAspectFill)
     }
     
 }

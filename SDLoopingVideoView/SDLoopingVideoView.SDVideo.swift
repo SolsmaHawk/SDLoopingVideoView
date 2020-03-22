@@ -12,7 +12,7 @@ import AVKit
 extension SDLoopingVideoView {
     
     public enum SDVideo {
-        case video(fileName: String, fileextension: SDVideoExtension, scaling: AVLayerVideoGravity  = .resizeAspectFill)
+        case video(fileName: String, fileExtension: SDVideoExtension, scaling: AVLayerVideoGravity  = .resizeAspectFill)
         
         var fileNameWithExtension: String {
             fileName + "." + fileExtension
