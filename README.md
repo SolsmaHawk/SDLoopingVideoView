@@ -40,20 +40,20 @@ The easiest way to create a ```SDLoopingVideoView``` is to drag and drop a ```UI
 ### Programatically
 You can also initialize an SDLoopingVideoView by declaring it in code:
 ```
-let loopingVideoView = SDLoopingVideoView.init(frame: 
-CGRect.init(x: 0, y: 0, width: 200, height: 200), 
-videoName: "your_video_name", 
-videoType: "mp4")
-view.addSubview(loopingVideoView)
+let loopingVideoView = SDLoopingVideoView(frame: CGRect(x: 0, y: 0, width: 100, height: 100), video: .video(fileName: "yourVideoName", fileExtension: .mpg))
 ```
-Or if you want to manually set scaling (defaults to aspect-fill):
+Or if you want to also include a video to use in darkmode:
 ```
-let loopingVideoView = SDLoopingVideoView.init(frame: 
-CGRect.init(x: 0, y: 0, width: 200, height: 200), 
-videoName: "your_video_name", 
-videoType: "mp4",
-scaling: .resizeAspectFill)
-view.addSubview(loopingVideoView)
+let loopingVideoViewWithDarkMode = SDLoopingVideoView(frame: CGRect(x: 0, y: 0, width: 100, height: 100), 
+video: .video(fileName: "yourVideoName", fileExtension: .mpg), 
+darkModeVideo: .video(fileName: "yourDarkModeVideoName", fileExtension: .mov))
+```
+You can also set scaling for each video separately:
+
+```
+let loopingVideoViewWithDarkModeAndCustomScaling = SDLoopingVideoView(frame: CGRect(x: 0, y: 0, width: 100, height: 100), 
+video: .video(fileName: "yourVideoName", fileExtension: .mpg, scaling: .resizeAspectFill), 
+darkModeVideo: .video(fileName: "yourDarkModeVideoName", fileExtension: .mov, scaling: .resizeAspect))
 ```
 
 Simple!
