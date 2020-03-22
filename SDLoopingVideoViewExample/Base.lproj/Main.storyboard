@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NTS-BX-KCQ">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="pAZ-24-kPx">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="NTS-BX-KCQ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="s4l-dc-3TT">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vZD-4F-vUI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wgo-wv-cwd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-654" y="132"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -27,6 +40,8 @@
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="videoName" value="solsmaDev_logo"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="videoType" value="mov"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="videoNameDarkMode" value="velocityBreaker_video"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="videoTypeDarkMode" value="mov"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cfh-tp-HOk" customClass="SDLoopingVideoView" customModule="SDLoopingVideoViewExample" customModuleProvider="target">
@@ -35,25 +50,97 @@
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="videoName" value="velocityBreaker_video"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="videoType" value="mov"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="videoNameDarkMode" value="solsmaDev_logo"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="videoTypeDarkMode" value="mov"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
                                 <viewLayoutGuide key="safeArea" id="vaP-Mu-uWx"/>
                             </stackView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tWT-BU-PNu">
+                                <rect key="frame" x="0.0" y="386" width="375" height="50"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="BMU-Az-5YA">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebQ-Mq-75N">
+                                            <rect key="frame" x="54" y="4" width="267" height="42"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="42" id="snl-CH-lUC"/>
+                                                <constraint firstAttribute="width" constant="267" id="tfK-4U-JhJ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <state key="normal" title="Tap for Dark Mode Demo"/>
+                                            <connections>
+                                                <action selector="viewDarkModeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4x3-SN-du3"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ebQ-Mq-75N" firstAttribute="centerY" secondItem="BMU-Az-5YA" secondAttribute="centerY" id="2cz-h9-4CL"/>
+                                        <constraint firstItem="ebQ-Mq-75N" firstAttribute="centerX" secondItem="BMU-Az-5YA" secondAttribute="centerX" id="aZz-z9-amw"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="og5-V7-KQb"/>
+                                </constraints>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="WaH-vw-9nT" secondAttribute="trailing" id="1yq-fe-j81"/>
                             <constraint firstAttribute="top" secondItem="WaH-vw-9nT" secondAttribute="top" id="FNV-h0-EZq"/>
                             <constraint firstItem="WaH-vw-9nT" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="NtM-qb-jYq"/>
+                            <constraint firstAttribute="trailing" secondItem="tWT-BU-PNu" secondAttribute="trailing" id="raN-pR-jGe"/>
+                            <constraint firstItem="tWT-BU-PNu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wPL-ED-JoY"/>
                             <constraint firstItem="WaH-vw-9nT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wlt-cy-xSQ"/>
+                            <constraint firstItem="tWT-BU-PNu" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="yiC-Js-bJ6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="A4T-hv-BQj"/>
+                    <connections>
+                        <segue destination="8WG-01-UKd" kind="show" identifier="showDarkModeDemo" id="TMf-5l-7T2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.00492610837438"/>
+        </scene>
+        <!--Dark Mode Demo View Controller-->
+        <scene sceneID="YaY-oy-Nxg">
+            <objects>
+                <viewController id="8WG-01-UKd" customClass="DarkModeDemoViewController" customModule="SDLoopingVideoViewExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SEq-tJ-hUj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CI2-16-gx6" customClass="SDLoopingVideoView" customModule="SDLoopingVideoViewExample" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="videoName" value="nyc_skyline_day"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="videoNameDarkMode" value="nyc_skyline_night"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="videoType" value="mp4"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="videoTypeDarkMode" value="mp4"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="CI2-16-gx6" firstAttribute="leading" secondItem="SEq-tJ-hUj" secondAttribute="leading" id="H2d-l7-fpw"/>
+                            <constraint firstItem="CI2-16-gx6" firstAttribute="bottom" secondItem="SEq-tJ-hUj" secondAttribute="bottom" id="V02-IS-UE1"/>
+                            <constraint firstAttribute="top" secondItem="CI2-16-gx6" secondAttribute="top" id="Vtn-PH-nI7"/>
+                            <constraint firstAttribute="trailing" secondItem="CI2-16-gx6" secondAttribute="trailing" id="dv1-h3-lj2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7sy-fH-8iZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ozd-0z-zb6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oca-9z-mEp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="949.60000000000002" y="132.26600985221674"/>
         </scene>
     </scenes>
 </document>
