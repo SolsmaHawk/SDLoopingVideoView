@@ -17,6 +17,9 @@ class ViewController: UIViewController {
         // view.addSubview(loopingVideoView)
     }
 
-
+    @IBAction func viewDarkModeButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "showDarkModeDemo", sender: nil)
+    }
+    
 }
 
