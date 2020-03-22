@@ -43,6 +43,9 @@ public class SDLoopingVideoView: UIView {
         self.videoName = video.fileName
         self.videoNameDarkMode = darkModeVideo?.fileName
         self.videoType = video.fileNameWithExtension
+        self.videoTypeDarkMode = darkModeVideo?.fileExtension
+        self.videoScaling = video.gravity
+        self.videoScalingDarkMode = darkModeVideo?.gravity
         super.init(frame:frame)
         attemptVideoSetup()
     }
@@ -59,8 +62,9 @@ public class SDLoopingVideoView: UIView {
         }
         if player == nil  {
             self.backgroundColor = UIColor.clear
+            let video = videoForUserInterfaceStyle
             DispatchQueue.global(qos: .userInitiated).async { [weak self] in
-                guard let self = self, let path = Bundle.main.path(forResource: self.videoForUserInterfaceStyle.fileName, ofType: self.videoForUserInterfaceStyle.fileExtension) else {
+                guard let self = self, let path = Bundle.main.path(forResource: video.fileName, ofType: video.fileExtension) else {
                         debugPrint("video file not found")
                         return
                 }
@@ -70,7 +74,7 @@ public class SDLoopingVideoView: UIView {
                     self.player = AVPlayer(playerItem: playerItem)
                     self.player?.isMuted = true
                     self.playerLayer.player = self.player
-                    self.playerLayer.videoGravity = self.videoForUserInterfaceStyle.gravity
+                    self.playerLayer.videoGravity = video.gravity
                     self.player!.play()
                     NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: self.player!.currentItem, queue: .main) { [weak self] _ in
                         guard let player = self?.player else { return }
@@ -95,6 +99,10 @@ public class SDLoopingVideoView: UIView {
         } catch{
             print("Unknown error")
         }
+    }
+    
+    override public func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+      
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -127,8 +135,8 @@ extension SDLoopingVideoView {
     }
     
     private var videoForUserInterfaceStyle: SDVideo {
-        if let dmv = videoTypeDarkMode, let dmvt = videoTypeDarkMode, let dmvs = videoScalingDarkMode, traitCollection.userInterfaceStyle == .dark {
-            return .video(fileName: dmv, fileextension: SDVideoExtension(from: dmvt), scaling: dmvs)
+        if let dmv = videoNameDarkMode, let dmvt = videoTypeDarkMode, traitCollection.userInterfaceStyle == .dark {
+            return .video(fileName: dmv, fileextension: SDVideoExtension(from: dmvt), scaling: videoScalingDarkMode ?? .resizeAspectFill)
         }
         return .video(fileName: videoName ?? "", fileextension: SDVideoExtension(from: videoType ?? ""), scaling: videoScaling ?? .resizeAspectFill)
     }
