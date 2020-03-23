@@ -12,6 +12,7 @@
 		31420D3724270AAD00A7B409 /* nyc_skyline_day.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 31420D3524270AAC00A7B409 /* nyc_skyline_day.mp4 */; };
 		31420D3824270AAD00A7B409 /* nyc_skyline_night.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 31420D3624270AAC00A7B409 /* nyc_skyline_night.mp4 */; };
 		31420D3A24270D0E00A7B409 /* DarkModeDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31420D3924270D0E00A7B409 /* DarkModeDemoViewController.swift */; };
+		31806902242835FC006724D9 /* SDLoopingDarkModeDemo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 31806901242835FC006724D9 /* SDLoopingDarkModeDemo.gif */; };
 		31E948A22220CE4400C6A14C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E948A12220CE4400C6A14C /* AppDelegate.swift */; };
 		31E948A42220CE4400C6A14C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E948A32220CE4400C6A14C /* ViewController.swift */; };
 		31E948A72220CE4400C6A14C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31E948A52220CE4400C6A14C /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 		31420D3524270AAC00A7B409 /* nyc_skyline_day.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = nyc_skyline_day.mp4; sourceTree = "<group>"; };
 		31420D3624270AAC00A7B409 /* nyc_skyline_night.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = nyc_skyline_night.mp4; sourceTree = "<group>"; };
 		31420D3924270D0E00A7B409 /* DarkModeDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeDemoViewController.swift; sourceTree = "<group>"; };
+		31806901242835FC006724D9 /* SDLoopingDarkModeDemo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = SDLoopingDarkModeDemo.gif; sourceTree = "<group>"; };
 		31E9489E2220CE4400C6A14C /* SDLoopingVideoViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDLoopingVideoViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31E948A12220CE4400C6A14C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31E948A32220CE4400C6A14C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				31E948CC22231AFC00C6A14C /* SDLoopingVideoView_demo.gif */,
 				31E948CD22231CAD00C6A14C /* attributesInspector.png */,
 				31E948CE22231F6700C6A14C /* SDLoopingVideoView_twovideoDemo.gif */,
+				31806901242835FC006724D9 /* SDLoopingDarkModeDemo.gif */,
 			);
 			path = Screenshots;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				31E948AC2220CE4700C6A14C /* LaunchScreen.storyboard in Resources */,
 				31E948CA2222FA1000C6A14C /* LICENSE in Resources */,
 				31E948A92220CE4700C6A14C /* Assets.xcassets in Resources */,
+				31806902242835FC006724D9 /* SDLoopingDarkModeDemo.gif in Resources */,
 				31E948B92220D1FC00C6A14C /* velocityBreaker_video.mov in Resources */,
 				31E948A72220CE4400C6A14C /* Main.storyboard in Resources */,
 				31420D3724270AAD00A7B409 /* nyc_skyline_day.mp4 in Resources */,
