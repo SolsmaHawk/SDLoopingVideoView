@@ -11,6 +11,7 @@
 SDLoopingVideoView is a looping video-view based off of AVPlayerLayer; it works great when used as a video background (see below for list of apps using SDLoopingVideoView). SDLoopingVideoView automatically scales any video  displayed to aspect-fill the view you define; scaling can be set manually as well. SDLoopingVideoView responds to any UIView animations and scales accordingly without interuption of the video playing.
 
 ![](Screenshots/SDLoopingVideoView_demo.gif)
+![](Screenshots/SDLoopingDarkModeDemo.gif)
 
 ## Example
 
